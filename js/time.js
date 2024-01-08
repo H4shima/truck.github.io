@@ -31,18 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  function startCounter(end, element, interval) {
-    let current = 0;
-    const counterInterval = setInterval(function () {
-      if (current === end) {
-        clearInterval(counterInterval);
-      }
+function startCounter(end, element, interval) {
+	let current = 0;
+	const counterInterval = setInterval(function () {
+		if (current === end) {
+			clearInterval(counterInterval);
+		}
 
-      if (element) {
-        element.innerHTML = current;
-      }
+		if (element && element.innerHTML !== null) {
+			element.innerHTML = current;
+		}
 
-      current++;
-    }, interval / end);
-  }
+		current++;
+	}, interval / end);
+}
 });
